@@ -1,3 +1,0 @@
-/Users/qizhitong/Documents/C++/Cha8/build/CMakeFiles/main.dir
-/Users/qizhitong/Documents/C++/Cha8/build/CMakeFiles/edit_cache.dir
-/Users/qizhitong/Documents/C++/Cha8/build/CMakeFiles/rebuild_cache.dir

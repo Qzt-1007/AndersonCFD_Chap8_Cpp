@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.26)#版本可修改
+project(Cha8)
+
+# 添加头文件目录
+include_directories(include)
+
+# 收集 src 目录下所有 .cpp 文件
+file(GLOB SOURCE_FILES "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
+
+foreach(SOURCE_FILE ${SOURCE_FILES})
+    # 获取不带扩展名的文件名（例如 "main.cpp" -> "main"）
+    get_filename_component(EXEC_NAME ${SOURCE_FILE} NAME_WE)
+    
+    # 为每个源文件创建一个独立可执行文件
+    add_executable(${EXEC_NAME} ${SOURCE_FILE})
+    
+    # （可选）设置输出目录，便于管理
+    set_target_properties(${EXEC_NAME} PROPERTIES
+        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
+    )
+endforeach()
